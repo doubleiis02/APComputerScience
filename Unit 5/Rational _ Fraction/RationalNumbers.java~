@@ -1,0 +1,85 @@
+// name:
+// date:
+// Rational "Driver" class
+// RationalNumbers
+
+import java.util.StringTokenizer;
+import java.util.Scanner;
+
+public class RationalNumbers
+{
+	//helper method that accepts fraction as a string
+	// and converts to a Rational Object
+	private static Rational getRational(String fraction)
+	{
+		StringTokenizer tokenizer = new StringTokenizer(fraction,"/");
+		Integer numerator = new Integer(tokenizer.nextToken().trim());
+		Integer denominator = new Integer(tokenizer.nextToken().trim());
+
+		return new Rational(numerator.intValue(), denominator.intValue());
+	}
+
+	//helper method to print results
+	private static void printResults(Rational r1, Rational r2)
+	{
+		Rational r3,r4,r5,r6,r7;
+		System.out.println("\n********************************");
+		System.out.println("First rational number: " + r1);
+		System.out.println("Second rational number: " + r2);
+
+		if (r1.equals(r2))
+			System.out.println("r1 and r2 are equal.");
+		else
+			System.out.println("r1 and r2 are NOT equal.");
+
+		r3 = r1.reciprocal(); //gets reciprocal
+		r4 = r1.add(r2);
+		r5 = r1.subtract(r2);
+		r6 = r1.multiply(r2);
+		r7 = r1.divide(r2);
+
+		System.out.println("The reciprocal of r1 is: " + r3);
+		System.out.println("r1 + r2: " + r4);
+		System.out.println("r1 - r2: " + r5);
+		System.out.println("r1 * r2: " + r6);
+		System.out.println("r1 / r2: " + r7);
+		System.out.println("\n********End Test****************");
+	}
+
+	public static void main(String[] args)
+	{
+		Rational r1, r2;
+		String another="y";
+		Scanner input = new Scanner(System.in);
+
+		while (another.equalsIgnoreCase("y"))
+		{
+			System.out.println("\nEnter the first fraction (x/y): ");
+			r1 = getRational(input.nextLine());
+
+			System.out.println("\nEnter the second fraction (x/y): ");
+			r2 = getRational(input.nextLine());
+
+			printResults(r1, r2);
+
+			System.out.println("Continue (y/n)? ");
+			another = input.nextLine();
+
+		}
+
+
+
+
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

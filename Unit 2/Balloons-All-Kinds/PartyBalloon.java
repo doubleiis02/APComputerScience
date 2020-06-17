@@ -1,0 +1,49 @@
+// Jiin Kim
+// period 2
+// 10/15/19
+
+// PartyBalloon subclasses RoundBalloon
+
+// imported classes in parent class are not inherited in subclass
+import java.awt.Color;
+import java.awt.Graphics;
+
+public class PartyBalloon extends RoundBalloon
+{
+  // constructors
+  public PartyBalloon()
+  {
+    super();
+  }
+  public PartyBalloon(int x, int y, int r, Color c)
+  {
+    super(x, y, r, c);
+  }
+  
+  // override the draw method
+  public void draw(Graphics g, boolean makeItFilled)
+  {
+    super.draw(g, makeItFilled);
+    //helper method to draw the bottom part
+    drawBottom(g, makeItFilled);
+  }
+  
+  public void drawBottom(Graphics g, boolean makeItFilled)
+  {
+    // create "oval" parameters for nub
+    int x = getX() - (int)(getRadius() * .1);
+    int y = getY() + getRadius();
+    int w = (int)(getRadius() * .2);
+    int h = (int)(getRadius() * .1);
+    
+    // draw the ribbon
+    g.setColor(Color.BLACK);
+    g.drawLine(x+(int)(w/2),y,x+(int)(w/2),y+getRadius());
+    // draw the nub
+    g.setColor(getColor());
+    if (makeItFilled)
+      g.fillOval(x,y,w,h);
+    else
+      g.drawOval(x,y,w,h);
+  }
+}

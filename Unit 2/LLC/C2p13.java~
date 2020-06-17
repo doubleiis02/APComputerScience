@@ -1,0 +1,32 @@
+// Jiin Kim
+// period 2
+// 10/29/19
+
+// Project C2p13
+
+// Write an application that creates & prints a random phone # of the form XXX-XXX-XXX
+// Include the dashes in the output
+// Do not let the first three digits contain an 8 or 9
+// Make sure the second set of three digits is not greater than 742
+
+
+public class C2p13
+{
+  public static void main(String[] args)
+  { 
+    // first 3 digits
+    int digits1n1 = (int)(Math.random() * 6 + 1);
+    int digits1n2 = (int)(Math.random() * 6 + 1);
+    int digits1n3 = (int)(Math.random() * 6 + 1);
+    int digits1 = digits1n1 * 100 + digits1n2 * 10 + digits1n3;
+    
+    // second 3 digits
+    int digits2 = (int)(Math.random() * 642 + 100);
+    
+    // third 3 digits
+    int digits3 = (int)(Math.random() * 899 + 100);
+    
+    // print random phone number
+    System.out.print(digits1 + "-" + digits2 + "-" + digits3);
+  }
+}

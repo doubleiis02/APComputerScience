@@ -1,0 +1,53 @@
+// Jiin Kim
+// period 2
+// 1/14/20
+
+// LetterCount - using char arrays
+
+import java.util.Scanner;
+
+public class LetterCount
+{
+  public static void main(String[] args)
+  {
+    final int NUMCHARS = 26; // constant 
+    Scanner input = new Scanner(System.in);
+    
+    int[] upper = new int[NUMCHARS];
+    int[] lower = new int[NUMCHARS];
+    
+    char current; // current character being processed
+    int other = 0; // counter for non-alpha characters
+    
+    System.out.println("Enter a sentence: ");
+    String line = input.nextLine();
+    
+    // count the number of each letter occurence
+    for (int ch = 0; ch < line.length; ch++)
+    {
+      current = line.charAt(ch);
+      if (current >= 'A' && current <= 'Z')
+        upper[current - 'A']++; // add one to upper[position of char] so if current == 'A' then upper[0]++
+      else if (current >= 'a' && current <= 'z')
+        lower[current - 'a']++;
+      else
+        other++; // increment the non alpha character counter
+    }
+    
+    // print the results
+    System.out.println();
+    for (int i = 0; i < upper.length; i++)
+    {
+      System.out.print((char)(i + 'A')+ " : " + upper[i] + "\n");
+    }
+    
+    System.out.println();
+    for (int i = 0; i < lower.length; i++)
+    {
+      System.out.print((char)(i + 'a') + " : " + lower[i] + "\n");
+    }
+    
+    System.out.println();
+    System.out.print(current + " : non-alpha characters");
+  }
+}

@@ -1,0 +1,34 @@
+// Jiin Kim
+// period 2
+// 12/12/19
+import java.util.Scanner;
+public class NameTester
+{
+  public static void main(String[] args)
+  {
+    String name, fName, lName, initials, backwards = "";
+    int len;
+    Scanner input = new Scanner(System.in);
+    
+    System.out.println("Type in your name (first last)");
+    
+    name = input.nextLine().trim(); // full name entered & trimmed
+    fName = name.substring(0, name.indexOf(" "));
+    lName = name.substring(name.indexOf(" ") + 1);
+    intials = fName.substring(0,1).toUpperCase + "." + lName.substring(0,1).toUpperCase + ".";
+    
+    int i = name.length()-1
+    while (i >= 0)
+    {
+      backwards += name.charAt(i);
+      i--;
+    }
+    
+    System.out.println("Full name: " + name);
+    System.out.println("First name: " + fName);
+    System.out.println("Last name: " + lName);
+    System.out.println("Initials: " + initials);
+    System.out.println("Backwards: " + backwards);
+    
+  }
+}

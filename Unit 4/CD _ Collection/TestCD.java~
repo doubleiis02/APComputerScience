@@ -1,0 +1,13 @@
+// Jiin Kim
+// period 2
+// 1/28/20
+
+// driver class for the CD Collection project
+
+public class TestCD
+{
+  public static void main(String[] args)
+  {
+    
+  }
+}

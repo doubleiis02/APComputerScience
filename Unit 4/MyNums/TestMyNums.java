@@ -1,0 +1,18 @@
+// Jiin Kim 
+// period 2
+// 1/7/20
+
+public class TestMyNums
+{
+  public static void main(String[] args)
+  {
+    MyNums list = new MyNums();
+    System.out.print(list);
+    System.out.print("\nmax value: " + list.getMax() + " at index[" + list.findMax() +"]");
+    System.out.print("\nmin value: " + list.getMin() + " at index[" + list.findMin() + "]");
+    System.out.print("\naverage value: " + list.getAvg());
+    list.swapFirstLast();
+    System.out.print("\n\nafter swap:\n");
+    System.out.print(list);
+  }
+}

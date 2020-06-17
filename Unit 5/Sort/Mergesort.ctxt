@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Mergesort
+comment1.params=a
+comment1.target=void\ sort(double[])
+comment2.params=a\ from\ to
+comment2.target=void\ recursiveSort(double[],\ int,\ int)
+comment3.params=a\ from\ middle\ to
+comment3.target=void\ merge(double[],\ int,\ int,\ int)
+numComments=4

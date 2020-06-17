@@ -1,0 +1,101 @@
+// Jiin Kim
+// period 2
+// 11/18/19
+
+// class what a day!
+// practicing conditional structures
+
+// provide a random day of the week for a student
+// using a helper method
+
+import java.util.Scanner;
+
+public class WhatADay
+{
+  public static void main(String[] args)
+  { 
+    // return a random day
+    System.out.println("Random day: " + randomDay());
+    System.out.println("Buckle what? " + nurseryRhyme());
+  }
+  
+  public static String randomDay()
+  {
+    int d = (int)(Math.random() * 7);
+    String day = "";
+    
+    // use switch statement
+    switch(d)
+    {
+      case 0:
+        day = "Sunday";
+        break;
+      case 1:
+        day = "Monday";
+        break;
+      case 2:
+        day = "Tuesday";
+        break;
+      case 3:
+        day = "Wednesday";
+        break;
+      case 4:
+        day = "Thursday";
+        break;
+      case 5:
+        day = "Friday";
+        break;
+      case 6:
+        day = "Saturday";
+        break;
+      default:
+        day = "Unknown";
+    }
+    return day;
+  }
+  
+  // nursery rhyme ask user # 1-8
+  // return the correct line from
+  // 1, 2, buckle your shoe
+  // 3, 4, shut the door
+  // 5, 6, pick up sticks
+  // 7, 8, don't be late!
+  public static String nurseryRhyme()
+  {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Input integer from 1 to 8: ");
+    int l = sc.nextInt();
+    String line = "";
+    
+    switch(l)
+    {
+      case 0:
+        day = "Sunday";
+        break;
+      case 1:
+        day = "Monday";
+        break;
+      case 2:
+        day = "Tuesday";
+        break;
+      case 3:
+        day = "Wednesday";
+        break;
+      case 4:
+        day = "Thursday";
+        break;
+      case 5:
+        day = "Friday";
+        break;
+      case 6:
+        day = "Saturday";
+        break;
+      case 7:
+        break;
+      case 8: 
+        break;
+      default:
+        day = "Unknown";
+    }
+  }
+}

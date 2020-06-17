@@ -1,0 +1,28 @@
+// Jiin Kim
+// period 2
+// 1/27/20
+
+// class CD represents a Compact Disc
+
+public class CD
+{
+  // instance fields
+  private String artist, title;
+  private double cost;
+  private int tracks;
+  
+  // constructor(s) to populate or declare instance fields with unique data
+  public CD(String artist, String title, double cost, int tracks)
+  {
+    this.artist = artist;
+    this.title = title;
+    this.cost = cost;
+    this.tracks = tracks;
+  }
+  
+  // methods (or services)
+  public String toString()
+  {
+    
+  }
+}

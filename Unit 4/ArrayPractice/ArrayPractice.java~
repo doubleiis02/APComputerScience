@@ -1,0 +1,19 @@
+// Jiin Kim
+// period 2
+// 1/6/20
+
+// Arrray Practice
+
+public class ArrayPractice
+{
+  public static void main(String[] args)
+  {
+    // Array construction, making arrays
+    // int array called nums, MUST know length
+    
+    int[] nums; // declares an int array
+    nums = new int[10]; // new array object of ints storing 10 ints
+    
+    System.out.println(nums);
+  }
+}

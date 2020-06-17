@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Benchmarks
+comment1.params=
+comment1.target=Benchmarks()
+comment2.params=a\ sortMethod\ numberOfRuns
+comment2.target=long\ runSort(double[],\ int,\ int)
+comment2.text=\r\n\ Fills\ a[]\ with\ random\ numbers\ and\ sorts\ it\ using\ the\ sorting\ method\r\n\ specified\ in\ sortMethod\:\r\n\ \ \ \ 1\ --\ Selection\ Sort\r\n\ \ \ \ 2\ --\ Insertion\ Sort\r\n\ \ \ \ 3\ --\ Mergesort\r\n\ \ \ \ 4\ --\ Quicksort\r\n\ This\ is\ repeated\ numberOfRuns\ times\ for\ better\ accuracy\r\n\ Returns\ the\ total\ time\ it\ took\ in\ milliseconds.\r\n
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+numComments=4

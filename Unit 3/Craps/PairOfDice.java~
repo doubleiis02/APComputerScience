@@ -1,0 +1,50 @@
+// create a class called PairOfDice
+
+public class PairOfDice
+{
+  // instance fields die1, die2 (Die objects)
+  Die die1, die2;
+  
+  // methods:
+  
+  // roll(): void
+  public void roll()
+  {
+    
+  }
+  
+  // isSnakeEyes(): boolean
+  public boolean isSnakeEyes()
+  {
+    
+  }
+  
+  // isBoxCars(): boolean 6 and 6
+  public boolean isBoxCars()
+  {
+    
+  }
+  
+  // isDouble(): boolean
+  public boolean isDouble()
+  {
+    
+  }
+  
+  // is7or11(): boolean
+  public boolean is7or11()
+  {
+    
+  }
+  
+  // getTotal(): int
+  public int getTotal()
+  {
+    
+  }
+  // toString(): String
+  public String toString()
+  {
+    
+  }
+}

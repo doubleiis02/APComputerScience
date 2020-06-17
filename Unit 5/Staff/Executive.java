@@ -1,0 +1,35 @@
+// Jiin Kim
+// period 2
+// 3/10/20
+
+// create a class Executive which subclasses Employee
+
+public class Executive extends Employee
+{
+  // instance field for bonus
+  private double bonus;
+  
+  public Executive(String n, String a, String p, String s, double pay)
+  {
+    super(n, a, p, s, pay);
+    bonus = 0.0;
+  }
+  
+  // override the pay method whihc adds bonus
+  public double pay()
+  {
+    return getPayRate() + bonus; // can't access private field declared in superclass
+  }
+  
+  // add method awardBonus: accepts a double parameter
+  public void awardBonus(double b)
+  {
+    bonus += b;
+  }
+  
+  // override to String identify as Executive
+  public String toString()
+  {
+    return "Executive " + super.toString();
+  }
+}

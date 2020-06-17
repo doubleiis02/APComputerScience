@@ -1,0 +1,13 @@
+// Jiin Kim
+// period 2
+// 3/12/20
+
+// create a driver for Triangle hierarchy
+
+public class TestTriangles
+{
+  public static void main(String[] args)
+  {
+    
+  }
+}

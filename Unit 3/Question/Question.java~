@@ -1,0 +1,24 @@
+// Jiin Kim
+// period 2
+// 12/12/19
+
+// Question class
+
+import java.util.Scanner;
+
+public class Question
+{
+  public static void main(String[] args)
+  {
+    Scanner input = new Scanner(System.in);
+    String question = "What OOP concept is behind private instance fields?";
+    String answer = "encapsulation";
+    
+    System.out.println(question);
+    if (input.nextLine().equalsIgnoreCase(answer)) 
+      // .equalsIgnoreCase allows case to be ignored when determining if string is equal to another
+      System.out.println("Great job :)");
+    else
+      System.out.println("Try again :(");
+  }
+}

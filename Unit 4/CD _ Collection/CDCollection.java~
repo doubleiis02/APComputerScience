@@ -1,0 +1,41 @@
+// Jiin Kim
+// period 2
+// 1/27/20
+
+// create a class which holds a collection of CDs
+
+public class CDCollection
+{
+  // instance fields
+  // declare array of CD called collection
+  private CD[] collection;
+  private int count;
+  private double totalCost;
+  
+  // constructor
+  public CDCollection()
+  {
+    collection = new CD[5];
+    count = 0;
+    totalCost = 0.0;
+  }
+  
+  // service method
+  public void addCD(String a, String t, double cost, int tracks)
+  {
+    if (count == collection.length)
+      increaseSize(); // helper method to increase size of array
+    collection[count] = new CD(a, t, cost, tracks);
+    count++;
+  }
+  
+  private void increaseSize()
+  {
+    CD[] newCollection = new CD[collection.length * 2];
+    for (int i = 0; i < collection.length; i++)
+    {
+       newCollection[i] = collection[i]; 
+    }
+    collection = newCollection;
+  }
+}

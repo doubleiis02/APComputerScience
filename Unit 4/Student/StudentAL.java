@@ -1,0 +1,215 @@
+// Jiin Kim
+// period 2
+// 2/6/20
+
+// create a Student class that uses the Stu & StuInfo interfaces
+
+import  java.util.ArrayList;
+
+public class StudentAL implements Stu, StuInfo
+{
+  // implement all the abstract methods form each interfaces
+  // infer what instance fields the Student class should have to make methods work
+  // also, infer what the "full arg" constructor or any overloaded constructors should be
+  
+  // instance fields
+  private ArrayList<Assignment> assignments;
+  private String name, gender, username;
+  private int id, year;
+  
+  // constructors
+  public StudentAL(String name, String gender, String username, 
+                 int id, int year, ArrayList<Assignment> assignments)
+  {
+    this.name = name;
+    this.gender = gender;
+    this.username = username;
+    this.id = id;
+    this.year = year;
+    this.assignments = assignments;
+  }
+  
+  public StudentAL(String name, String gender, String username, int id, int year)
+  {
+    this.name = name;
+    this.gender = gender;
+    this.username = username;
+    this.id = id;
+    this.year = year;
+    assignments = new ArrayList<Assignment>();
+    fillRandomAssignments(10);
+  }
+  
+  public StudentAL(String name, String gender, String username)
+  {
+    this.name = name;
+    this.gender = gender;
+    this.username = username;
+    id = (int)(Math.random() * 9000000) + 1000000;
+    year = (int)(Math.random() * 10) + 2020;
+    assignments = new ArrayList<Assignment>();
+    fillRandomAssignments(10);
+  }
+  
+  public StudentAL()
+  {
+    name = "FirstName LastName";
+    gender = "unknown";
+    username = "username";
+    id = (int)(Math.random() * 9000000) + 1000000;
+    year = (int)(Math.random() * 10) + 2020;
+    assignments = new ArrayList<Assignment>();
+    fillRandomAssignments(10);
+  }
+  
+  // accessor methods
+  
+  public String getName()
+  {
+    return name;
+  }
+  
+  public int getId()
+  {
+    return id;
+  }
+  
+  public String getGender()
+  {
+    return gender;
+  }
+  
+  public int getYear()
+  {
+    return year;
+  }
+  
+  public String getUsername()
+  {
+    return username;
+  }
+  
+  public ArrayList<Assignment> getAssignments()
+  {
+    return assignments;
+  }
+  
+  // service methods
+  
+  public Assignment getGrade(String title)
+  {
+    for (Assignment a : assignments)
+    {
+      if (a.getName().equals(title))
+        return a;
+    }
+    return null;
+  }
+  
+  public void addGrade(Assignment grade)
+  {
+    assignments.add(grade);
+  }
+  
+  public Assignment removeGrade(int index)
+  {
+    return assignments.remove(index);
+  }
+  
+  public double getGradeAverage()
+  {
+    double total = 0;
+    for (Assignment a : assignments)
+      total += a.calcPercentage();
+    return total / assignments.size();
+  }
+  
+  public double getMaxGrade()
+  {
+    double max = 0;
+    for (Assignment a : assignments)
+    {
+      if (a.calcPercentage() > max)
+        max = a.calcPercentage();
+    }
+    return max;
+  }
+  
+  public double getMinGrade()
+  {
+    double min = 1;
+    for (Assignment a : assignments)
+    {
+      if (a.calcPercentage() < min)
+        min = a.calcPercentage();
+    }
+    return min;
+  }
+  
+  public void printAllGrades()
+  {
+    for (Assignment a : assignments)
+      System.out.println(a.calcPercentage());
+  }
+  
+  // helper method
+  
+  private void fillRandomAssignments(int n)
+  {
+    String name = "Assignment ";
+    for (int i = 0; i < n; i++)
+    {
+      name += i+1;
+      assignments.add(new Assignment(name));
+      name = "Assignment ";
+    }
+  }
+  
+  // set methods
+  
+  public void setName(String name)
+  {
+    this.name = name;
+  }
+  
+  public void setGender(String gender)
+  {
+    this.gender = gender;
+  }
+  
+  public void setUsername(String username)
+  {
+    this.username = username;
+  }
+  
+  public void setId(int id)
+  {
+    this.id = id;
+  }
+  
+  public void setYear(int year)
+  {
+    this.year = year;
+  }
+  
+  public void setAssignments(ArrayList<Assignment> assignments)
+  {
+    this.assignments = assignments;
+  }                      
+                 
+  // also overload the toString method
+  
+  public String toString()
+  {
+    // private ArrayList<Assignment> assignments;
+    // private String name, gender, username;
+    // private int id, year;
+    
+    return "Student Name: " + name
+      + "\nID: " + id
+      + "\nUsername: " + username 
+      + "\nGrad Year: " + year
+      + "\nGender: " + gender
+      + "\n# of Assignments: " + assignments.size();
+  }
+}

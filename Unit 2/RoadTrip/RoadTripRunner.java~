@@ -1,0 +1,10 @@
+// Jiin Kim
+// period 2 
+// 10/1/19
+
+// driver class for RoadTrip
+
+public class RoadTripRunner
+{
+  RoadTrip r1 = new RoadTrip("La Jolla", 120);
+  RoadTrip r2 = new RoadTrip("Ojai", 134);

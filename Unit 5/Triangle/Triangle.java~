@@ -1,0 +1,10 @@
+// Jiin Kim
+// period 2
+// 3/12/20
+
+// create an abstract class representing a Triangle
+
+public abstract class Triangle
+{
+  
+}

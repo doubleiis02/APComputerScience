@@ -1,0 +1,37 @@
+// Jiin Kim
+// period 2
+// 3/10/20
+
+// create a class Hourly which subclasses Employee
+
+public class Hourly extends Employee
+{
+  // instance field hoursWorked as int
+  private int hoursWorked;
+  
+  public Hourly(String n, String a, String p, String s, double pay)
+  {
+    super(n, a, p, s, pay);
+    hoursWorked = 0; // set to zero in constructor
+  }
+  
+  // method to addHours
+  public void addHours(int h)
+  {
+    hoursWorked += h;
+  }
+  
+  // override pay to reflect payRate * hoursWorked (remember to set hours to...
+  public double pay()
+  {
+    double payment = getPayRate() * hoursWorked; // can't access private field declared in superclass
+    hoursWorked = 0;
+    return payment;
+  }
+  
+  // override toString method to show hoursWorked also & Hourly employee
+  public String toString()
+  {
+    return "Hourly " + super.toString() + "\nHours Worked: " + hoursWorked;
+  }
+}

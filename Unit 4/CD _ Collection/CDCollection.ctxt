@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=CDCollection
+comment1.params=
+comment1.target=CDCollection()
+comment2.params=a\ t\ cost\ tracks
+comment2.target=void\ addCD(java.lang.String,\ java.lang.String,\ double,\ int)
+comment3.params=
+comment3.target=void\ increaseSize()
+comment4.params=pos1\ pos2
+comment4.target=void\ swap(int,\ int)
+comment5.params=loc\ artist\ title\ cost\ tracks
+comment5.target=void\ insertCD(int,\ java.lang.String,\ java.lang.String,\ double,\ int)
+comment6.params=loc\ artist\ title\ cost\ tracks
+comment6.target=void\ insertCD2(int,\ java.lang.String,\ java.lang.String,\ double,\ int)
+comment7.params=loc
+comment7.target=void\ removeCD(int)
+comment8.params=
+comment8.target=CD[]\ getCollection()
+comment9.params=
+comment9.target=java.lang.String\ toString()
+numComments=10

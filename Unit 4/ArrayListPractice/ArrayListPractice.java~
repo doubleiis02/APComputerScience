@@ -1,0 +1,59 @@
+// Jiin Kim
+// period 2
+// 2/3/20
+
+// practice class with ArrrayList data structure
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArrayListPractice
+{
+  public static void main(String[] args)
+  {
+    // declare and initialize ArrayList of String named "names"
+    ArrayList<String> names = new ArrayList<String>(); // always have <E>
+    
+    // declare an ArrayList storing char named letters w capacity of 26
+    ArrayList<Character> letters = 
+      new ArrayList<Character>(26); // wrapper class for char = Character
+    
+    // declare a List of Integer named nums
+    List<Integer> nums; // wrapper class for int = Integer
+    
+    // initialize nums as ArrayList w capacity of 30
+    nums = new ArrayList<Integer>(30); // AN ARRAYLIST IS A LIST
+    
+    // print out the nums list
+    System.out.println(nums); // run -> []
+    System.out.println(nums.isEmpty()); // run -> true
+    
+    // write a for lop to add 20 random int to nums
+    for (int i = 0; i < 20; i++)
+      nums.add((int)(Math.random() * 101));
+    System.out.println(nums);
+    
+    // insert the number 500 to the middle of the list
+    nums.add(nums.size()/2, new Integer(500));
+    System.out.println(nums);
+    System.out.println(nums.size()); // run -> 21
+    
+    // find & remove the 500 -> place at the beginning & end of list
+    int fh = nums.remove(nums.indexOf(500));
+    nums.add(0, fh);
+    nums.add(fh);
+    System.out.println(nums);
+    System.out.println(nums.size());
+    
+    // remove all of the even numbers from nums
+    int i = 0;
+    while (i < nums.size())
+    {
+      if (nums.get(i) % 2 == 0)
+        nums.remove(i);
+      else // prevents skipping a value after nums.remove(i) since i values shift
+        i++;
+    }
+    System.out.println(nums);
+  }
+}

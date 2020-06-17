@@ -1,0 +1,21 @@
+// Jiin Kim
+// period 2
+// 12/5/19
+
+// LoopTester
+
+public class LoopTester
+{
+  public static void main(String[] args)
+  {
+    printNum();
+  }
+  
+  // create a loop which prints numbers 1 to 20
+  public static void printNum()
+  {
+    for (int i = 1; i <= 20; i++)
+      System.out.println(i);
+  }
+  
+}
